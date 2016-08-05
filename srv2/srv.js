@@ -93,7 +93,7 @@ var gParsers = {
 function executer(task) {
 	var _this = this;
 
-	mUrllib.request(task.url, {gzip: true})
+	mUrllib.request(task.url, {gzip: true, timeout: 20000})
 	.then(function(result) {
 
 		return new Promise(function(resolve, reject) {
